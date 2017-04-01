@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="loadLayout">
+        <attr name="loadEmptyLayout" format="reference" />
+        <attr name="loadErrorLayout" format="reference" />
+        <attr name="loadLoadingLayout" format="reference" />
+        <attr name="loadNoNetworkLayout" format="reference" />
+    </declare-styleable>
+</resources>

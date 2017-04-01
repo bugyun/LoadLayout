@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.test.loadlayout.MainActivity">
+
+    <com.github.bugyun.loadlayout.LoadLayout
+        android:id="@+id/mLoadLayout"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        app:loadEmptyLayout="@layout/layout_load_no_data"
+        app:loadErrorLayout="@layout/layout_load_error"
+        app:loadLoadingLayout="@layout/layout_load_loading">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.github.bugyun.loadlayout.LoadLayout>
+
+</android.support.constraint.ConstraintLayout>
