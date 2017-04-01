@@ -47,3 +47,13 @@ android 加载布局
     
 
 ## 引用
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+	dependencies {
+    	  compile 'com.github.bugyun:LoadLayout:1.0.0'
+    }
