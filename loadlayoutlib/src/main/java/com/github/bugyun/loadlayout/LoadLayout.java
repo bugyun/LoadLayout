@@ -7,7 +7,6 @@ import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -137,7 +136,6 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
                     mContentView.setVisibility(View.VISIBLE);
                 break;
         }
-//        invalidate();
     }
 
     @Override
@@ -145,18 +143,6 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
         if (onReloadListener != null) {
             onReloadListener.onReload();
         }
-    }
-
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        Log.e("zyh", "onMeasure");
-    }
-
-    @Override
-    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right, bottom);
-        Log.e("zyh", "onLayout");
     }
 
     public interface OnReloadListener {
