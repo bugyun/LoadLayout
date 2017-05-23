@@ -37,11 +37,7 @@ android 加载布局
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Hello World!"/>
 
     </com.github.bugyun.loadlayout.LoadLayout>
     
@@ -55,5 +51,5 @@ android 加载布局
 	}
 	
 	dependencies {
-    	  compile 'com.github.bugyun:LoadLayout:1.0.0'
+    	  compile 'com.github.bugyun:LoadLayout:1.0.1'
     }
