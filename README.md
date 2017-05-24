@@ -43,6 +43,9 @@ android 加载布局
     
 
 ## 引用
+
+[![](https://jitpack.io/v/bugyun/LoadLayout.svg)](https://jitpack.io/#bugyun/LoadLayout)
+
     allprojects {
 		repositories {
 			maven { url 'https://jitpack.io' }
