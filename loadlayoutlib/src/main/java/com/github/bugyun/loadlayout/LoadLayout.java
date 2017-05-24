@@ -161,11 +161,11 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
     public void onRestoreInstanceState(Parcelable state) {
         SavedState ss = (SavedState) state;
         super.onRestoreInstanceState(ss.getSuperState());
-        setLayoutLoadMode(ss.state);
+        setLoadMode(ss.state);
     }
 
     private static class SavedState extends BaseSavedState {
-        int state;
+        private int state;
 
         SavedState(Parcelable superState) {
             super(superState);
@@ -182,8 +182,7 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
             out.writeInt(state);
         }
 
-        public static final Parcelable.Creator<SavedState> CREATOR
-                = new Parcelable.Creator<SavedState>() {
+        public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {
                 return new SavedState(in);
             }
