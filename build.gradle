@@ -29,7 +29,7 @@ ext {
     siteUrl = 'https://github.com/bugyun/LoadLayout'
     gitUrl = 'https://github.com/bugyun/LoadLayout.git'
     group = "com.github.bugyun"
-    version = "1.0.1"
+    version = "1.0.2"
     id = 'trace'
     name = 'bugyun'
     email = 'zyhdvlp@gmail.com'
