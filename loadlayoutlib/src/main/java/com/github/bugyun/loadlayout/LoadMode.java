@@ -9,5 +9,5 @@ public interface LoadMode {
     int ERROR = 0x15;//错误
     int LOADING = 0x20;//加载中
     int SUCCESS = 0x25;//成功
-    //int NO_NETWORK = 0x30;//没有网络
+    int NO_NETWORK = 0x30;//没有网络
 }

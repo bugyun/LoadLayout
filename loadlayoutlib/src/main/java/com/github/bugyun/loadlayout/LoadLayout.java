@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -69,6 +70,7 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
     }
 
     private void initAttributes(Context context, AttributeSet attrs) {
+        Log.d("zyh", "initAttributes");
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.loadLayout, 0, 0);
         loadEmptyLayoutId = ta.getResourceId(R.styleable.loadLayout_loadEmptyLayout, R.layout.layout_load_no_data);
         loadErrorLayoutId = ta.getResourceId(R.styleable.loadLayout_loadErrorLayout, R.layout.layout_load_error);
@@ -79,6 +81,7 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
 
 
     private void initView(Context context) {
+        Log.d("zyh", "initView");
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         layout_load_error = layoutInflater.inflate(loadErrorLayoutId, this, false);
         layout_load_loading = layoutInflater.inflate(loadLoadingLayoutId, this, false);
@@ -193,5 +196,15 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
         };
     }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        Log.d("zyh", "onMeasure");
+    }
 
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        Log.d("zyh", "onLayout");
+    }
 }
