@@ -57,7 +57,8 @@ public class LoadLayout extends FrameLayout implements View.OnClickListener {
     }
 
     public LoadLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+        super(context, attrs);
+        Log.i("zyh", "defStyleAttr   :" + defStyleAttr);
         initAttributes(context, attrs);
         initView(context);
     }

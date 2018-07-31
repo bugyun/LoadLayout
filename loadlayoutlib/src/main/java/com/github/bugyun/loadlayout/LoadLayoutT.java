@@ -17,10 +17,10 @@ import android.widget.FrameLayout;
  */
 public class LoadLayoutT extends FrameLayout {
 
-    private static Builder builder;
+    private Builder builder;
 
-    public static void setBuilder(Builder builder) {
-        LoadLayoutT.builder = builder;
+    public void setBuilder(Builder builder) {
+        this.builder = builder;
     }
 
     private View layout_load_error;//加载失败
