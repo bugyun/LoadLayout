@@ -41,11 +41,6 @@ public class NoDataLayoutFactory implements ILoadLayoutFactory {
     }
 
     @Override
-    public void setOnClick() {
-        Log.i("zyh", "NoNetworkLayoutFactory   setOnClick");
-    }
-
-    @Override
     public void onShow() {
 
     }

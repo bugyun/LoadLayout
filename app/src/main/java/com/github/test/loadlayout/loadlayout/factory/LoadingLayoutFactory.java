@@ -32,11 +32,6 @@ public class LoadingLayoutFactory implements ILoadLayoutFactory {
     }
 
     @Override
-    public void setOnClick() {
-
-    }
-
-    @Override
     public void onShow() {
 
     }

@@ -76,10 +76,6 @@ public class LoadLayoutT extends FrameLayout {
         layout_load_no_data.setVisibility(mLoadMode == LoadMode.NO_DATA ? View.VISIBLE : View.GONE);
         layout_load_no_data.setVisibility(mLoadMode == LoadMode.NO_DATA ? View.VISIBLE : View.GONE);
         layout_load_no_network.setVisibility(mLoadMode == LoadMode.NO_NETWORK ? View.VISIBLE : View.GONE);
-        builder.errorLayoutFactory.setOnClick();
-        builder.loadingLayoutFactory.setOnClick();
-        builder.noDataLayoutFactory.setOnClick();
-        builder.noNetworkLayoutFactory.setOnClick();
         addView(layout_load_error);
         addView(layout_load_loading);
         addView(layout_load_no_data);

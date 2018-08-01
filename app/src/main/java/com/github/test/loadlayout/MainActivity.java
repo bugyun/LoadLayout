@@ -2,6 +2,7 @@ package com.github.test.loadlayout;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -62,8 +63,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onReload() {
                 mLoadLayout.setLoadMode(LoadMode.LOADING);//加载状态
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.i("zyh", "你好");
+                    }
+                }, 9999);
+
             }
         });
+
+
 
 
     }

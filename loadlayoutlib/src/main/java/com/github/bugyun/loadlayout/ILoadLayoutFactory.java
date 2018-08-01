@@ -14,8 +14,6 @@ public interface ILoadLayoutFactory {
 
     View createView(View view);
 
-    void setOnClick();
-
     void onShow();
 
     void onHide();
@@ -26,11 +24,6 @@ public interface ILoadLayoutFactory {
         @Override
         public View createView(View view) {
             return view;
-        }
-
-        @Override
-        public void setOnClick() {
-
         }
 
         @Override

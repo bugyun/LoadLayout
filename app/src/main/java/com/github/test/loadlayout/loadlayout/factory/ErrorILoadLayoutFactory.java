@@ -41,11 +41,6 @@ public class ErrorILoadLayoutFactory extends ILoadLayoutFactory.DefaultILoadLayo
     }
 
     @Override
-    public void setOnClick() {
-        Log.i("zyh", "NoNetworkLayoutFactory   setOnClick");
-    }
-
-    @Override
     public void onShow() {//动画开始的地方
     }
 

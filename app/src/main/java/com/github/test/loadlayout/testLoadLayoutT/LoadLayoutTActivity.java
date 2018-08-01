@@ -2,7 +2,7 @@ package com.github.test.loadlayout.testLoadLayoutT;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
+import android.util.Log;
 
 import com.github.bugyun.loadlayout.LoadLayoutT;
 import com.github.bugyun.loadlayout.LoadMode;
@@ -16,14 +16,6 @@ public class LoadLayoutTActivity extends BaseActivity {
     LoadLayoutT.Builder builder = QuickCreateLoadBuildHelper.create(this);
     private LoadLayoutT mLoadLayoutT;
 
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            mLoadLayoutT.setLoadMode(LoadMode.SUCCESS);
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         LoadLayoutInflater.setFactory(this, builder);
@@ -36,6 +28,13 @@ public class LoadLayoutTActivity extends BaseActivity {
     @Override
     public void fetchData() {
         mLoadLayoutT.setLoadMode(LoadMode.LOADING);
-        handler.sendEmptyMessageAtTime(1, 30000);
+        Log.i("zyh", Thread.currentThread() + "当前线程");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.i("zyh", "执行 LoadMode.SUCCESS");
+                mLoadLayoutT.setLoadMode(LoadMode.SUCCESS);
+            }
+        }, 3000);
     }
 }
