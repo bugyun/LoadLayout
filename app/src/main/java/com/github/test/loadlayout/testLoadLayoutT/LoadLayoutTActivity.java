@@ -11,6 +11,9 @@ import com.github.test.loadlayout.BaseActivity;
 import com.github.test.loadlayout.R;
 import com.github.test.loadlayout.loadlayout.QuickCreateLoadBuildHelper;
 
+/**
+ * 设置 LayoutInflaterCompat.setFactory，对view创建进行拦截
+ */
 public class LoadLayoutTActivity extends BaseActivity {
 
     LoadLayoutT.Builder builder = QuickCreateLoadBuildHelper.create(this);

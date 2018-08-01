@@ -9,6 +9,9 @@ import com.github.bugyun.loadlayout.normal.LoadLayoutNormal;
 import com.github.test.loadlayout.BaseActivity;
 import com.github.test.loadlayout.R;
 
+/**
+ * 没有倾入性，不需要设置LayoutInflaterCompat.setFactory
+ */
 public class LoadLayouNormalActivity extends BaseActivity {
 
     private LoadLayoutNormal.Builder builder = QuickCreateLoadBuildHelper.create(this);
@@ -21,6 +24,12 @@ public class LoadLayouNormalActivity extends BaseActivity {
         setContentView(R.layout.activity_load_layou_normal);
         mLoadLayoutNormal = (LoadLayoutNormal) findViewById(R.id.mLoadLayoutNormal);
         mLoadLayoutNormal.setBuilder(builder);
+//        mLoadLayoutNormal.setBuilder(new LoadLayoutNormal.Builder().buildCreateErrorLayout(new ILoadLayoutFactory.DefaultILoadLayoutFactory() {
+//            @Override
+//            public int createLayoutId() {
+//                return 0;
+//            }
+//        }).build());
         mLoadLayoutNormal.setLoadMode(LoadMode.ERROR);
     }
 
