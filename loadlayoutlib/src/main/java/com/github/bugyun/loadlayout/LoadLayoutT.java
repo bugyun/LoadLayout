@@ -19,10 +19,6 @@ public class LoadLayoutT extends FrameLayout {
 
     private Builder builder;
 
-    public void setBuilder(Builder builder) {
-        this.builder = builder;
-    }
-
     private View layout_load_error;//加载失败
     private View layout_load_loading;//正在加载中
     private View layout_load_no_data;//没有数据
@@ -54,6 +50,13 @@ public class LoadLayoutT extends FrameLayout {
         super(context, attrs, defStyleAttr);
         initView(context);
     }
+
+    public LoadLayoutT(Context context, AttributeSet attrs, Builder builder) {
+        super(context, attrs);
+        this.builder = builder;
+        initView(context);
+    }
+
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public LoadLayoutT(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
@@ -218,27 +221,27 @@ public class LoadLayoutT extends FrameLayout {
 
     public static class Builder {
 
-        private LoadLayoutFactory noDataLayoutFactory;
-        private LoadLayoutFactory errorLayoutFactory;
-        private LoadLayoutFactory loadingLayoutFactory;
-        private LoadLayoutFactory noNetworkLayoutFactory;
+        private ILoadLayoutFactory noDataLayoutFactory;
+        private ILoadLayoutFactory errorLayoutFactory;
+        private ILoadLayoutFactory loadingLayoutFactory;
+        private ILoadLayoutFactory noNetworkLayoutFactory;
 
-        public Builder buildCreateNoDataLayout(LoadLayoutFactory factory) {
+        public Builder buildCreateNoDataLayout(ILoadLayoutFactory factory) {
             this.noDataLayoutFactory = factory;
             return this;
         }
 
-        public Builder buildCreateErrorLayout(LoadLayoutFactory factory) {
+        public Builder buildCreateErrorLayout(ILoadLayoutFactory factory) {
             this.errorLayoutFactory = factory;
             return this;
         }
 
-        public Builder buildCreateLoadingLayout(LoadLayoutFactory factory) {
+        public Builder buildCreateLoadingLayout(ILoadLayoutFactory factory) {
             this.loadingLayoutFactory = factory;
             return this;
         }
 
-        public Builder buildCreateNoNetworkLayout(LoadLayoutFactory factory) {
+        public Builder buildCreateNoNetworkLayout(ILoadLayoutFactory factory) {
             this.noNetworkLayoutFactory = factory;
             return this;
         }
@@ -251,7 +254,7 @@ public class LoadLayoutT extends FrameLayout {
 
         private void checkNotNull() {
             if (noDataLayoutFactory == null) {
-                noDataLayoutFactory = new LoadLayoutFactory.DefaultLoadLayoutFactory() {
+                noDataLayoutFactory = new ILoadLayoutFactory.DefaultILoadLayoutFactory() {
 
                     @Override
                     public int createLayoutId() {
@@ -260,7 +263,7 @@ public class LoadLayoutT extends FrameLayout {
                 };
             }
             if (errorLayoutFactory == null) {
-                noDataLayoutFactory = new LoadLayoutFactory.DefaultLoadLayoutFactory() {
+                noDataLayoutFactory = new ILoadLayoutFactory.DefaultILoadLayoutFactory() {
 
                     @Override
                     public int createLayoutId() {
@@ -269,7 +272,7 @@ public class LoadLayoutT extends FrameLayout {
                 };
             }
             if (loadingLayoutFactory == null) {
-                noDataLayoutFactory = new LoadLayoutFactory.DefaultLoadLayoutFactory() {
+                noDataLayoutFactory = new ILoadLayoutFactory.DefaultILoadLayoutFactory() {
 
                     @Override
                     public int createLayoutId() {
@@ -278,7 +281,7 @@ public class LoadLayoutT extends FrameLayout {
                 };
             }
             if (noNetworkLayoutFactory == null) {
-                noDataLayoutFactory = new LoadLayoutFactory.DefaultLoadLayoutFactory() {
+                noDataLayoutFactory = new ILoadLayoutFactory.DefaultILoadLayoutFactory() {
 
                     @Override
                     public int createLayoutId() {

@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoadLayoutTActivity" />
+        <activity android:name=".FragmentTestActivity"></activity>
     </application>
 
 </manifest>

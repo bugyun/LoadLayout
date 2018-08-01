@@ -14,16 +14,10 @@ import android.view.View;
 import com.github.bugyun.loadlayout.LoadLayout;
 import com.github.bugyun.loadlayout.LoadMode;
 
-/**
- * https://blog.csdn.net/lmj623565791/article/details/51503977
- */
-public class MainActivity extends AppCompatActivity {
-
-    private LoadLayout mLoadLayout;
+public class FragmentTestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         final LayoutInflater layoutInflater = getLayoutInflater();
         LayoutInflaterCompat.setFactory(layoutInflater, new LayoutInflaterFactory() {
             @Override
@@ -47,24 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 return view;
             }
         });
+
         super.onCreate(savedInstanceState);
-
-        Log.d("zyh", "onCreate 1");
-        setContentView(R.layout.activity_main);
-        Log.d("zyh", "onCreate 2");
-        mLoadLayout = (LoadLayout) findViewById(R.id.mLoadLayout);
-//        mLoadLayout.setLoadMode(LoadMode.LOADING);//加载状态
-        mLoadLayout.setLoadMode(LoadMode.ERROR);//错误状态,没有网络
-//        mLoadLayout.setLoadMode(LoadMode.NO_DATA);//没有数据状态
-//        mLoadLayout.setLoadMode(LoadMode.SUCCESS);//成功状态
-
-        mLoadLayout.setOnReloadListener(new LoadLayout.OnReloadListener() {
-            @Override
-            public void onReload() {
-                mLoadLayout.setLoadMode(LoadMode.LOADING);//加载状态
-            }
-        });
-
-
+        setContentView(R.layout.activity_fragment_test);
     }
 }

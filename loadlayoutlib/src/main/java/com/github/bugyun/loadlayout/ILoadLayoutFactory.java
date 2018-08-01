@@ -8,7 +8,7 @@ import android.view.View;
  * Mail:zyhdvlp@gmail.com
  * Depiction:
  */
-public interface LoadLayoutFactory {
+public interface ILoadLayoutFactory {
 
     int createLayoutId();
 
@@ -21,7 +21,7 @@ public interface LoadLayoutFactory {
     void onHide();
 
 
-    abstract class DefaultLoadLayoutFactory implements LoadLayoutFactory {
+    abstract class DefaultILoadLayoutFactory implements ILoadLayoutFactory {
 
         @Override
         public View createView(View view) {
