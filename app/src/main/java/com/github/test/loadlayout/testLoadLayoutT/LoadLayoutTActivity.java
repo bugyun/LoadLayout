@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
+import com.github.bugyun.loadlayout.LoadLayoutHelper;
 import com.github.bugyun.loadlayout.LoadLayoutT;
 import com.github.bugyun.loadlayout.LoadMode;
 import com.github.test.loadlayout.BaseActivity;
 import com.github.test.loadlayout.R;
-import com.github.test.loadlayout.loadlayout.LoadLayoutInflater;
 import com.github.test.loadlayout.loadlayout.QuickCreateLoadBuildHelper;
 
 public class LoadLayoutTActivity extends BaseActivity {
@@ -18,7 +18,7 @@ public class LoadLayoutTActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        LoadLayoutInflater.setFactory(this, builder);
+        LoadLayoutHelper.setFactory(this, builder);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_layout_t);
         mLoadLayoutT = (LoadLayoutT) findViewById(R.id.mLoadLayoutT);
