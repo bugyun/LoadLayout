@@ -44,23 +44,19 @@ public class LoadLayoutNormal extends FrameLayout {
 
     public LoadLayoutNormal(Context context) {
         super(context);
-//        initView(context);
     }
 
     public LoadLayoutNormal(Context context, AttributeSet attrs) {
         super(context, attrs);
-//        initView(context);
     }
 
     public LoadLayoutNormal(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-//        initView(context);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public LoadLayoutNormal(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-//        initView(context);
     }
 
     public void setBuilder(Builder builder) {
