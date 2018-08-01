@@ -1,5 +1,6 @@
 package com.github.test.loadlayout.loadlayout.factory;
 
+import android.util.Log;
 import android.view.View;
 
 import com.github.bugyun.loadlayout.ILoadLayoutFactory;
@@ -28,12 +29,20 @@ public class NoDataLayoutFactory implements ILoadLayoutFactory {
 
     @Override
     public View createView(View view) {
+        Log.i("zyh", "NoNetworkLayoutFactory   createView");
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("zyh", "点击layout_load_no_data");
+                iFetchData.fetchData();
+            }
+        });
         return view;
     }
 
     @Override
     public void setOnClick() {
-
+        Log.i("zyh", "NoNetworkLayoutFactory   setOnClick");
     }
 
     @Override

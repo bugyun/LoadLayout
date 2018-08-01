@@ -1,4 +1,4 @@
-package com.github.test.loadlayout;
+package com.github.test.loadlayout.testFragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.github.bugyun.loadlayout.LoadLayout;
-import com.github.bugyun.loadlayout.LoadMode;
+import com.github.test.loadlayout.R;
 
 public class FragmentTestActivity extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class FragmentTestActivity extends AppCompatActivity {
                 //你可以在这里直接new自定义View
                 if (name.equalsIgnoreCase("com.github.bugyun.loadlayout.LoadLayout")) {
                     Log.i("zyh", "LoadLayout   equalsIgnoreCase 执行方法 ");
-                    return new LoadLayout(context, attrs, LoadMode.ERROR);
+                    return new LoadLayout(context, attrs, 100);
                 }
                 //你可以在这里将系统类替换为自定义View
                 //appcompat 创建view代码

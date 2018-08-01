@@ -9,7 +9,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.github.bugyun.loadlayout.LoadLayout;
 import com.github.bugyun.loadlayout.LoadLayoutT;
 
 /**
@@ -26,8 +25,8 @@ public class LoadLayoutInflater {
             public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
                 Log.i("zyh", name);
                 //你可以在这里直接new自定义View
-                if (name.equalsIgnoreCase("com.github.bugyun.loadlayout.LoadLayout")) {
-                    Log.i("zyh", "LoadLayout   equalsIgnoreCase 执行方法 ");
+                if (name.equalsIgnoreCase("com.github.bugyun.loadlayout.LoadLayoutT")) {
+                    Log.i("zyh", "LoadLayoutT   equalsIgnoreCase 执行方法 ");
                     return new LoadLayoutT(context, attrs, builder);
                 }
                 //你可以在这里将系统类替换为自定义View
@@ -35,7 +34,7 @@ public class LoadLayoutInflater {
                 AppCompatDelegate delegate = appCompatActivity.getDelegate();
                 View view = delegate.createView(parent, name, context, attrs);
 
-                if ((view instanceof LoadLayout)) {
+                if ((view instanceof LoadLayoutT)) {
 //                    ((LoadLayout) view).setBuilder(builder);
                     Log.i("zyh", "LoadLayout   执行方法");
                 }

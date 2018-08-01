@@ -1,5 +1,6 @@
 package com.github.test.loadlayout.loadlayout.factory;
 
+import android.util.Log;
 import android.view.View;
 
 import com.github.bugyun.loadlayout.ILoadLayoutFactory;
@@ -28,15 +29,20 @@ public class ErrorILoadLayoutFactory extends ILoadLayoutFactory.DefaultILoadLayo
 
     @Override
     public View createView(View view) {
-
-
+        Log.i("zyh", "NoNetworkLayoutFactory   createView");
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("zyh", "点击layout_load_error");
+                iFetchData.fetchData();
+            }
+        });
         return view;
     }
 
     @Override
     public void setOnClick() {
-        //如果要刷新的话可以执行
-//        activity.fetchData();
+        Log.i("zyh", "NoNetworkLayoutFactory   setOnClick");
     }
 
     @Override
