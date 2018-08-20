@@ -19,23 +19,23 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".testLoadLayoutT.LoadLayoutTActivity">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".testFragment.FragmentTestActivity"></activity>
+        <activity android:name=".testFragment.FragmentTestActivity" />
         <activity android:name=".testNormalLoadLayout.LoadLayouNormalActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".testFactoryLoadLayout.FactoryLoadLayoutActivity"></activity>
     </application>
 
 </manifest>

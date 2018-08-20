@@ -1,9 +1,9 @@
-package com.github.test.loadlayout.loadlayout.factory;
+package com.github.test.loadlayout.testFactoryLoadLayout.factory;
 
 import android.util.Log;
 import android.view.View;
 
-import com.github.bugyun.loadlayout.ILoadLayoutFactory;
+import com.github.bugyun.factoryloadlayout.ILoadLayoutState;
 import com.github.test.loadlayout.R;
 import com.github.test.loadlayout.loadlayout.IFetchData;
 
@@ -13,22 +13,22 @@ import com.github.test.loadlayout.loadlayout.IFetchData;
  * Mail:zyhdvlp@gmail.com
  * Depiction:
  */
-public class ErrorILoadLayoutFactory extends ILoadLayoutFactory.DefaultILoadLayoutFactory {
+public class NoNetworkLayoutState implements ILoadLayoutState {
 
     //或者通过接口来实现
     private IFetchData iFetchData;
 
-    public ErrorILoadLayoutFactory(IFetchData iFetchData) {
+    public NoNetworkLayoutState(IFetchData iFetchData) {
         this.iFetchData = iFetchData;
     }
 
     @Override
-    public int createLayoutId() {
-        return R.layout.layout_load_error;
+    public int onCreateLayoutId() {
+        return R.layout.layout_load_no_data;
     }
 
     @Override
-    public View createView(View view) {
+    public void onCreateView(View view) {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,14 +36,16 @@ public class ErrorILoadLayoutFactory extends ILoadLayoutFactory.DefaultILoadLayo
                 iFetchData.fetchData();
             }
         });
-        return view;
+
     }
 
     @Override
-    public void onShow() {//动画开始的地方
+    public void onShow() {
+
     }
 
     @Override
-    public void onHide() {//动画结束的地方
+    public void onHide() {
+
     }
 }

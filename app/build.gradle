@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.github.test.loadlayout"
         minSdkVersion 14
@@ -28,5 +28,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile project(path: ':loadlayoutlib')
+    compile project(path: ':factoryloadlayout')
+    compile project(path: ':superloadlayout')
 //    compile 'com.github.bugyun:LoadLayout:1.0.1'
 }
