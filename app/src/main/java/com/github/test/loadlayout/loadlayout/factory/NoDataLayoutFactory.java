@@ -29,7 +29,6 @@ public class NoDataLayoutFactory implements ILoadLayoutFactory {
 
     @Override
     public View createView(View view) {
-        Log.i("zyh", "NoNetworkLayoutFactory   createView");
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

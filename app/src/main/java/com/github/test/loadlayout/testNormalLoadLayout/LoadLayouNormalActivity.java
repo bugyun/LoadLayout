@@ -24,12 +24,6 @@ public class LoadLayouNormalActivity extends BaseActivity {
         setContentView(R.layout.activity_load_layou_normal);
         mLoadLayoutNormal = (LoadLayoutNormal) findViewById(R.id.mLoadLayoutNormal);
         mLoadLayoutNormal.setBuilder(builder);
-//        mLoadLayoutNormal.setBuilder(new LoadLayoutNormal.Builder().buildCreateErrorLayout(new ILoadLayoutFactory.DefaultILoadLayoutFactory() {
-//            @Override
-//            public int createLayoutId() {
-//                return 0;
-//            }
-//        }).build());
         mLoadLayoutNormal.setLoadMode(LoadMode.ERROR);
     }
 
