@@ -8,12 +8,12 @@ version = rootProject.ext.version//版本号，这个我们写在ext中了，没
 group = rootProject.ext.group//这个就是路径名的group了
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -26,7 +26,7 @@ android {
 }
 
 dependencies {
-    provided 'com.android.support:appcompat-v7:25.3.1'
+    compileOnly 'com.android.support:appcompat-v7:28.0.0'
 }
 
 //生成源文件
