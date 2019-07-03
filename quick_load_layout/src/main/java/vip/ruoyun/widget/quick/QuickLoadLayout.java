@@ -1,4 +1,4 @@
-package vip.ruoyun.widget;
+package vip.ruoyun.widget.quick;
 
 import android.annotation.TargetApi;
 import android.content.Context;

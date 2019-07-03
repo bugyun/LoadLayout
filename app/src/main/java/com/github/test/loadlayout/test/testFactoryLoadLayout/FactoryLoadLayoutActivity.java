@@ -1,4 +1,4 @@
-package com.github.test.loadlayout.testFactoryLoadLayout;
+package com.github.test.loadlayout.test.testFactoryLoadLayout;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import com.github.bugyun.factoryloadlayout.LoadLayout;
 import com.github.bugyun.factoryloadlayout.LoadLayoutHelper;
 import com.github.bugyun.factoryloadlayout.LoadMode;
 import com.github.test.loadlayout.R;
-import com.github.test.loadlayout.loadlayout.IFetchData;
+import com.github.test.loadlayout.test.loadlayout.IFetchData;
 
 public class FactoryLoadLayoutActivity extends AppCompatActivity implements IFetchData {
 

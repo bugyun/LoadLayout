@@ -5,6 +5,6 @@
     android:id="@+id/mLoadLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".testFactoryLoadLayout.FactoryLoadLayoutActivity">
+    tools:context=".test.testFactoryLoadLayout.FactoryLoadLayoutActivity">
 
 </com.github.bugyun.factoryloadlayout.LoadLayout>

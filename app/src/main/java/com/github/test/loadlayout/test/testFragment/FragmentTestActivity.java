@@ -1,4 +1,4 @@
-package com.github.test.loadlayout.testFragment;
+package com.github.test.loadlayout.test.testFragment;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -1,10 +1,10 @@
-package com.github.test.loadlayout.loadlayout;
+package com.github.test.loadlayout.test.loadlayout;
 
 import com.github.bugyun.loadlayout.LoadLayoutT;
-import com.github.test.loadlayout.loadlayout.factory.ErrorILoadLayoutFactory;
-import com.github.test.loadlayout.loadlayout.factory.LoadingLayoutFactory;
-import com.github.test.loadlayout.loadlayout.factory.NoDataLayoutFactory;
-import com.github.test.loadlayout.loadlayout.factory.NoNetworkLayoutFactory;
+import com.github.test.loadlayout.test.loadlayout.factory.ErrorILoadLayoutFactory;
+import com.github.test.loadlayout.test.loadlayout.factory.LoadingLayoutFactory;
+import com.github.test.loadlayout.test.loadlayout.factory.NoDataLayoutFactory;
+import com.github.test.loadlayout.test.loadlayout.factory.NoNetworkLayoutFactory;
 
 /**
  * Created by ruoyun on 2018/8/1.

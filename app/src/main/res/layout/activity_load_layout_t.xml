@@ -5,7 +5,7 @@
     android:id="@+id/mLoadLayoutT"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".testLoadLayoutT.LoadLayoutTActivity">
+    tools:context=".test.testLoadLayoutT.LoadLayoutTActivity">
 
     <TextView
         android:layout_width="wrap_content"

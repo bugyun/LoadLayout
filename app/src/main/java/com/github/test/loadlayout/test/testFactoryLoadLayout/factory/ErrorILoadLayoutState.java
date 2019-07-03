@@ -1,11 +1,11 @@
-package com.github.test.loadlayout.testFactoryLoadLayout.factory;
+package com.github.test.loadlayout.test.testFactoryLoadLayout.factory;
 
 import android.util.Log;
 import android.view.View;
 
 import com.github.bugyun.factoryloadlayout.ILoadLayoutState;
 import com.github.test.loadlayout.R;
-import com.github.test.loadlayout.loadlayout.IFetchData;
+import com.github.test.loadlayout.test.loadlayout.IFetchData;
 
 /**
  * Created by ruoyun on 2018/8/1.

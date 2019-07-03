@@ -1,4 +1,4 @@
-package com.github.test.loadlayout.testNormalLoadLayout;
+package com.github.test.loadlayout.test.testNormalLoadLayout;
 
 import android.os.Bundle;
 import android.os.Handler;

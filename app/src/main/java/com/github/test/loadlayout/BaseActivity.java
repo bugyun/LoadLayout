@@ -2,7 +2,7 @@ package com.github.test.loadlayout;
 
 import android.support.v7.app.AppCompatActivity;
 
-import com.github.test.loadlayout.loadlayout.IFetchData;
+import com.github.test.loadlayout.test.loadlayout.IFetchData;
 
 /**
  * Created by ruoyun on 2018/8/1.

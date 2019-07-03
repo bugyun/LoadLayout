@@ -1,11 +1,11 @@
-package com.github.test.loadlayout.testFactoryLoadLayout.factory;
+package com.github.test.loadlayout.test.testFactoryLoadLayout.factory;
 
 import android.util.Log;
 import android.view.View;
 
 import com.github.bugyun.factoryloadlayout.ILoadLayoutState;
 import com.github.test.loadlayout.R;
-import com.github.test.loadlayout.loadlayout.IFetchData;
+import com.github.test.loadlayout.test.loadlayout.IFetchData;
 
 /**
  * Created by ruoyun on 2018/8/1.
@@ -13,12 +13,12 @@ import com.github.test.loadlayout.loadlayout.IFetchData;
  * Mail:zyhdvlp@gmail.com
  * Depiction:
  */
-public class NoDataLayoutState implements ILoadLayoutState {
+public class NoNetworkLayoutState implements ILoadLayoutState {
 
     //或者通过接口来实现
     private IFetchData iFetchData;
 
-    public NoDataLayoutState(IFetchData iFetchData) {
+    public NoNetworkLayoutState(IFetchData iFetchData) {
         this.iFetchData = iFetchData;
     }
 
@@ -32,10 +32,11 @@ public class NoDataLayoutState implements ILoadLayoutState {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("zyh", "点击layout_load_no_data");
+                Log.i("zyh", "点击layout_load_error");
                 iFetchData.fetchData();
             }
         });
+
     }
 
     @Override

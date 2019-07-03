@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".testFragment.FragmentTestActivity">
+    tools:context=".test.testFragment.FragmentTestActivity">
 
 
     <fragment
         android:id="@+id/mLoadLayoutTFragment"
-        android:name="com.github.test.loadlayout.testFragment.LoadLayoutTFragment"
+        android:name="com.github.test.loadlayout.test.testFragment.LoadLayoutTFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

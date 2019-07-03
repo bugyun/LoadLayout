@@ -1,4 +1,4 @@
-package com.github.test.loadlayout.testLoadLayoutT;
+package com.github.test.loadlayout.test.testLoadLayoutT;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import com.github.bugyun.loadlayout.LoadLayoutT;
 import com.github.bugyun.loadlayout.LoadMode;
 import com.github.test.loadlayout.BaseActivity;
 import com.github.test.loadlayout.R;
-import com.github.test.loadlayout.loadlayout.QuickCreateLoadBuildHelper;
+import com.github.test.loadlayout.test.loadlayout.QuickCreateLoadBuildHelper;
 
 /**
  * 设置 LayoutInflaterCompat.setFactory，对view创建进行拦截

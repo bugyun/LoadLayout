@@ -1,4 +1,4 @@
-package com.github.test.loadlayout.loadlayout;
+package com.github.test.loadlayout.test.loadlayout;
 
 /**
  * Created by ruoyun on 2018/8/1.

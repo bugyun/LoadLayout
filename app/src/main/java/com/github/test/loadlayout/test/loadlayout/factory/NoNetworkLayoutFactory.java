@@ -1,11 +1,11 @@
-package com.github.test.loadlayout.testFactoryLoadLayout.factory;
+package com.github.test.loadlayout.test.loadlayout.factory;
 
 import android.util.Log;
 import android.view.View;
 
-import com.github.bugyun.factoryloadlayout.ILoadLayoutState;
+import com.github.bugyun.loadlayout.ILoadLayoutFactory;
 import com.github.test.loadlayout.R;
-import com.github.test.loadlayout.loadlayout.IFetchData;
+import com.github.test.loadlayout.test.loadlayout.IFetchData;
 
 /**
  * Created by ruoyun on 2018/8/1.
@@ -13,22 +13,22 @@ import com.github.test.loadlayout.loadlayout.IFetchData;
  * Mail:zyhdvlp@gmail.com
  * Depiction:
  */
-public class NoNetworkLayoutState implements ILoadLayoutState {
+public class NoNetworkLayoutFactory implements ILoadLayoutFactory {
 
     //或者通过接口来实现
     private IFetchData iFetchData;
 
-    public NoNetworkLayoutState(IFetchData iFetchData) {
+    public NoNetworkLayoutFactory(IFetchData iFetchData) {
         this.iFetchData = iFetchData;
     }
 
     @Override
-    public int onCreateLayoutId() {
+    public int createLayoutId() {
         return R.layout.layout_load_no_data;
     }
 
     @Override
-    public void onCreateView(View view) {
+    public View createView(View view) {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +36,7 @@ public class NoNetworkLayoutState implements ILoadLayoutState {
                 iFetchData.fetchData();
             }
         });
-
+        return view;
     }
 
     @Override
