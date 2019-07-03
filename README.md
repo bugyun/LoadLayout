@@ -11,7 +11,7 @@ android 加载布局的两种方式
 
 使用方法,在使用的子 build.gradle 中添加配置
 ```groovy
-implementation 'vip.ruoyun.widget:quick-load-layout:1.0.0'
+implementation 'vip.ruoyun.widget:quick-load-layout:1.0.3'
 ```
 
 ### xml设置
@@ -92,7 +92,7 @@ public class QuickLoadLayoutActivity extends AppCompatActivity {
 
 使用方法,在使用的子 build.gradle 中添加配置
 ```groovy
-implementation 'vip.ruoyun.widget:super-load-layout:1.0.0'
+implementation 'vip.ruoyun.widget:super-load-layout:1.0.3'
 ```
 
 ### xml
