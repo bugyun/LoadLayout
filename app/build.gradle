@@ -32,4 +32,8 @@ dependencies {
     implementation project(path: ':superloadlayout')
 //    implementation 'com.github.bugyun:LoadLayout:1.0.1'
     implementation 'com.alipictures:statemanager:1.0.0'
+
+    implementation project(path: ':quick_load_layout')
+    implementation project(path: ':super_load_layout')
+
 }

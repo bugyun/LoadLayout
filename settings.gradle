@@ -1,1 +1,1 @@
-include ':app', ':loadlayoutlib', ':factoryloadlayout', ':superloadlayout', ':quick_load_layout', ':super_load_layout'//, ':QuickLoadLayout'
+include ':app', ':loadlayoutlib', ':factoryloadlayout', ':superloadlayout', ':quick_load_layout', ':super_load_layout'
