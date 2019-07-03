@@ -5,9 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/LoadLayout.iml" filepath="$PROJECT_DIR$/LoadLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/factoryloadlayout/factoryloadlayout.iml" filepath="$PROJECT_DIR$/factoryloadlayout/factoryloadlayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/factoryloadlayout/factoryloadlayout.iml" filepath="$PROJECT_DIR$/factoryloadlayout/factoryloadlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/loadlayoutlib/loadlayoutlib.iml" filepath="$PROJECT_DIR$/loadlayoutlib/loadlayoutlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/superloadlayout/superloadlayout.iml" filepath="$PROJECT_DIR$/superloadlayout/superloadlayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quick_load_layout/quick_load_layout.iml" filepath="$PROJECT_DIR$/quick_load_layout/quick_load_layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_load_layout/super_load_layout.iml" filepath="$PROJECT_DIR$/super_load_layout/super_load_layout.iml" />
       <module fileurl="file://$PROJECT_DIR$/superloadlayout/superloadlayout.iml" filepath="$PROJECT_DIR$/superloadlayout/superloadlayout.iml" />
     </modules>
   </component>

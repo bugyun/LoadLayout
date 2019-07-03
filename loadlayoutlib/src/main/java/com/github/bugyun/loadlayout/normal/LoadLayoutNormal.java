@@ -26,7 +26,7 @@ public class LoadLayoutNormal extends FrameLayout {
     private View layout_load_error;//加载失败
     private View layout_load_loading;//正在加载中
     private View layout_load_no_data;//没有数据
-    private View layout_load_no_network;//没有数据
+    private View layout_load_no_network;//没有网络
     private View mContentView;//需要加载的界面
 
     private int mLoadMode = LoadMode.LOADING;

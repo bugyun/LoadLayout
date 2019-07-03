@@ -30,5 +30,6 @@ dependencies {
     implementation project(path: ':loadlayoutlib')
     implementation project(path: ':factoryloadlayout')
     implementation project(path: ':superloadlayout')
-//    compile 'com.github.bugyun:LoadLayout:1.0.1'
+//    implementation 'com.github.bugyun:LoadLayout:1.0.1'
+    implementation 'com.alipictures:statemanager:1.0.0'
 }

@@ -1,4 +1,4 @@
-package com.github.bugyun.superloadlayout;
+package vip.ruoyun.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,10 +12,20 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 /**
- * Created by ruoyun on 2016/10/14.
- * 加载布局的组合控件
+ * Created by ruoyun on 2019-07-03.
+ * Author:若云
+ * Mail:zyhdvlp@gmail.com
+ * Depiction:
  */
-public final class LoadLayout extends FrameLayout {
+public class SuperLoadLayout extends FrameLayout {
+
+    public interface LoadMode {
+        int NO_DATA = 0x10;//没有数据
+        int ERROR = 0x15;//错误
+        int LOADING = 0x20;//加载中
+        int SUCCESS = 0x25;//成功
+        int NO_NETWORK = 0x30;//没有网络
+    }
 
     private View mErrorView;//加载失败
     private View mLoadingView;//正在加载中
@@ -26,20 +36,20 @@ public final class LoadLayout extends FrameLayout {
     private int mLoadMode = LoadMode.SUCCESS;//
     private boolean isInitialize = false;//初始化状态
 
-    public LoadLayout(Context context) {
+    public SuperLoadLayout(Context context) {
         super(context);
     }
 
-    public LoadLayout(Context context, AttributeSet attrs) {
+    public SuperLoadLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public LoadLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SuperLoadLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public LoadLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public SuperLoadLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
@@ -164,27 +174,27 @@ public final class LoadLayout extends FrameLayout {
 
     public static class Builder {
 
-        private ILoadLayoutState noDataLayoutState;
-        private ILoadLayoutState errorLayoutState;
-        private ILoadLayoutState loadingLayoutState;
-        private ILoadLayoutState noNetworkLayoutState;
+        private ISuperLoadLayoutState noDataLayoutState;
+        private ISuperLoadLayoutState errorLayoutState;
+        private ISuperLoadLayoutState loadingLayoutState;
+        private ISuperLoadLayoutState noNetworkLayoutState;
 
-        public Builder buildCreateNoDataLayout(ILoadLayoutState state) {
+        public Builder buildCreateNoDataLayout(ISuperLoadLayoutState state) {
             this.noDataLayoutState = state;
             return this;
         }
 
-        public Builder buildCreateErrorLayout(ILoadLayoutState state) {
+        public Builder buildCreateErrorLayout(ISuperLoadLayoutState state) {
             this.errorLayoutState = state;
             return this;
         }
 
-        public Builder buildCreateLoadingLayout(ILoadLayoutState state) {
+        public Builder buildCreateLoadingLayout(ISuperLoadLayoutState state) {
             this.loadingLayoutState = state;
             return this;
         }
 
-        public Builder buildCreateNoNetworkLayout(ILoadLayoutState state) {
+        public Builder buildCreateNoNetworkLayout(ISuperLoadLayoutState state) {
             this.noNetworkLayoutState = state;
             return this;
         }
@@ -196,7 +206,7 @@ public final class LoadLayout extends FrameLayout {
 
         private void checkNotNull() {
             if (noDataLayoutState == null) {
-                noDataLayoutState = new ILoadLayoutState.DefaultLoadLayoutState() {
+                noDataLayoutState = new ISuperLoadLayoutState.DefaultLoadLayoutState() {
 
                     @Override
                     public int onCreateLayoutId() {
@@ -211,7 +221,7 @@ public final class LoadLayout extends FrameLayout {
                 };
             }
             if (errorLayoutState == null) {
-                errorLayoutState = new ILoadLayoutState.DefaultLoadLayoutState() {
+                errorLayoutState = new ISuperLoadLayoutState.DefaultLoadLayoutState() {
 
                     @Override
                     public int onCreateLayoutId() {
@@ -226,7 +236,7 @@ public final class LoadLayout extends FrameLayout {
                 };
             }
             if (loadingLayoutState == null) {
-                loadingLayoutState = new ILoadLayoutState.DefaultLoadLayoutState() {
+                loadingLayoutState = new ISuperLoadLayoutState.DefaultLoadLayoutState() {
 
                     @Override
                     public int onCreateLayoutId() {
@@ -241,7 +251,7 @@ public final class LoadLayout extends FrameLayout {
                 };
             }
             if (noNetworkLayoutState == null) {
-                noNetworkLayoutState = new ILoadLayoutState.DefaultLoadLayoutState() {
+                noNetworkLayoutState = new ISuperLoadLayoutState.DefaultLoadLayoutState() {
 
                     @Override
                     public int onCreateLayoutId() {
@@ -292,13 +302,15 @@ public final class LoadLayout extends FrameLayout {
         }
 
         public static final Creator<SavedState> CREATOR = new Creator<SavedState>() {
-            public LoadLayout.SavedState createFromParcel(Parcel in) {
-                return new LoadLayout.SavedState(in);
+            public SuperLoadLayout.SavedState createFromParcel(Parcel in) {
+                return new SuperLoadLayout.SavedState(in);
             }
 
-            public LoadLayout.SavedState[] newArray(int size) {
-                return new LoadLayout.SavedState[size];
+            public SuperLoadLayout.SavedState[] newArray(int size) {
+                return new SuperLoadLayout.SavedState[size];
             }
         };
     }
+
+
 }

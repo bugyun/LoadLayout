@@ -6,12 +6,8 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0-alpha03'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.novoda:bintray-release:0.9.1'
     }
 }
 
@@ -25,16 +21,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-ext {
-    siteUrl = 'https://github.com/bugyun/LoadLayout'
-    gitUrl = 'https://github.com/bugyun/LoadLayout.git'
-    group = "com.github.bugyun"
-    version = "1.0.2"
-    id = 'trace'
-    name = 'bugyun'
-    email = 'zyhdvlp@gmail.com'
-    packaging = 'aar'
-
 }
