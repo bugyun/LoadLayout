@@ -6,6 +6,7 @@ android 加载布局的两种方式
 
 完美支持 androidx 和 Android 库。
 
+---
 ## QuickLoadLayout
 
 使用方法,在使用的子 build.gradle 中添加配置
@@ -49,6 +50,10 @@ mQuickLoadLayout.setOnReloadListener(new QuickLoadLayout.OnReloadListener() {
     }
 });
 ```
+
+
+
+---
 
 ## SuperLoadLayout
 
