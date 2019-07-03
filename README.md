@@ -50,7 +50,40 @@ mQuickLoadLayout.setOnReloadListener(new QuickLoadLayout.OnReloadListener() {
     }
 });
 ```
+### 最佳实现
+```java
+public class QuickLoadLayoutActivity extends AppCompatActivity {
 
+    private Handler handler = new Handler();
+    private QuickLoadLayout mQuickLoadLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quick_load_layout);
+        mQuickLoadLayout = findViewById(R.id.mQuickLoadLayout);
+        mQuickLoadLayout.setOnReloadListener(new QuickLoadLayout.OnReloadListener() {
+            @Override
+            public void onReload() {
+                mQuickLoadLayout.setLoadMode(QuickLoadLayout.LoadMode.LOADING);
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mQuickLoadLayout.setLoadMode(QuickLoadLayout.LoadMode.SUCCESS);
+                    }
+                }, 2000);
+            }
+        });
+        mQuickLoadLayout.setLoadMode(QuickLoadLayout.LoadMode.LOADING);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mQuickLoadLayout.setLoadMode(QuickLoadLayout.LoadMode.ERROR);
+            }
+        }, 2000);
+    }
+}
+```
 
 
 ---
@@ -131,4 +164,38 @@ public class LoadingLayoutState implements ISuperLoadLayoutState {
 把创建好的 build 传入到 SuperLoadLayout 类中。
 ```java
 mSuperLoadLayout.setBuilder(SuperCreateLoadBuildHelper.create(this));
+```
+### 最佳实现
+```java
+public class SuperLoadLayoutActivity extends BaseActivity {
+
+    private SuperLoadLayout mSuperLoadLayout;
+    private Handler handler = new Handler();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_super_load_layout);
+        mSuperLoadLayout = findViewById(R.id.mSuperLoadLayout);
+        mSuperLoadLayout.setBuilder(SuperCreateLoadBuildHelper.create(this));
+        mSuperLoadLayout.setLoadMode(SuperLoadLayout.LoadMode.LOADING);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSuperLoadLayout.setLoadMode(QuickLoadLayout.LoadMode.NO_NETWORK);
+            }
+        }, 2000);
+    }
+
+    @Override
+    public void fetchData() {
+        mSuperLoadLayout.setLoadMode(SuperLoadLayout.LoadMode.LOADING);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSuperLoadLayout.setLoadMode(SuperLoadLayout.LoadMode.SUCCESS);
+            }
+        }, 3000);
+    }
+}
 ```
