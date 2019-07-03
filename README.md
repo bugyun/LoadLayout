@@ -167,6 +167,10 @@ mSuperLoadLayout.setBuilder(SuperCreateLoadBuildHelper.create(this));
 ```
 ### 最佳实现
 ```java
+public interface IFetchData {
+    void fetchData();//加载数据的接口
+}
+
 public class SuperLoadLayoutActivity extends BaseActivity {
 
     private SuperLoadLayout mSuperLoadLayout;
